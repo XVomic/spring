@@ -12,6 +12,6 @@ public class HelloSpring {
     }
 
     public void show(){
-        System.out.println(userName+"Hello Spring");
+        System.out.println(userName+"  Hello Spring");
     }
 }

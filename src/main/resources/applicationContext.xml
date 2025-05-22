@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--spring配置文件-->
+<!--    指定类的配置给spring，才能让spring创建指定类对象的实例-->
+    <bean id="helloSpring" class="com.xxc.HelloSpring">
+<!--为userName属性赋值，相当于初始化赋值-->
+        <property name="userName" value="张三"></property>
+    </bean>
+</beans>
