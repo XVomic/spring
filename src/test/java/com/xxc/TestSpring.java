@@ -1,5 +1,6 @@
 package com.xxc;
 
+import com.xxc.dao.UserDao;
 import com.xxc.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -10,5 +11,8 @@ public class TestSpring {
         UserService userService = (UserService) context.getBean("userService");
         boolean flag = userService.login("xxc", "123");
         System.out.println(flag);
+
+        UserDao userDao = (UserDao) context.getBean("userDao");
+        System.out.println(userDao);
     }
 }
