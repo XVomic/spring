@@ -4,8 +4,31 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--spring配置文件-->
 <!--    指定类的配置给spring，才能让spring创建指定类对象的实例-->
-    <bean id="helloSpring" class="com.xxc.HelloSpring">
+    <bean id="helloSpring" class="com.xxc.hellofirst.HelloSpring">
 <!--为userName属性赋值，相当于初始化赋值-->
         <property name="userName" value="张三"></property>
+    </bean>
+
+<!--    配置(注册)User1类的Bean-->
+    <bean id="user1" class="com.xxc.denpendencyInject.User1">
+<!--构造方法注入-->
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="zhangsan"/>
+        <constructor-arg index="2" value="123456"/>
+    </bean>
+
+    <!--    配置(注册)User1类的Bean-->
+    <bean id="user2" class="com.xxc.denpendencyInject.User2">
+        <!--setter方法注入-->
+        <property name="id" value="1"></property>
+        <property name="userName" value="lisi"></property>
+        <property name="password" value="123"></property>
+    </bean>
+
+<!--    类对象实例化-->
+    <bean id="userDao" class="com.xxc.dao.Impl.UserDaoImpl"></bean>
+<!--    依赖注入-->
+    <bean id="userService" class="com.xxc.service.Impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
     </bean>
 </beans>

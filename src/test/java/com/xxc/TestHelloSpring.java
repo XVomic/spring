@@ -1,5 +1,6 @@
 package com.xxc;
 
+import com.xxc.hellofirst.HelloSpring;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

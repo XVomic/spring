@@ -1,4 +1,4 @@
-package com.xxc;
+package com.xxc.hellofirst;
 
 public class HelloSpring {
     private String userName;
