@@ -4,15 +4,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--bean实例化-->
 <!--    在这里注册的bean在程序跑起来时都会被实例化-->
+
+<!--    spring在实例化时使用无参数构造函数实现bean实例化-->
     <bean id="bean1" class="com.beanlearn.noargs.Bean1"></bean>
 
+<!--    使用静态工厂模式创建bean,此时的仍然时直接注册bean2-->
     <bean id="bean2" class="com.beanlearn.staticfactory.MyBean2Factory" factory-method="createBean"></bean>
 
 
 <!--    下面这种模式factory就不是静态工厂，而是普通bean,如果要识别bean3的方法，方法不可以是静态方法-->
 <!--    实例工厂创建bean-->
+<!--    此处注册的对象为factory,所以factory为bean对象,被实例化-->
     <bean id="MyBean3Factory" class="com.beanlearn.beanFactory.MyBean3Factory"></bean>
-
+<!--由于使用实例工厂,所以首先注册实例工厂bean,然后下面这个bean由上面实例工厂中的方法完成-->
     <bean id="bean3" factory-bean="MyBean3Factory" factory-method="createBean3"></bean>
 
 </beans>
