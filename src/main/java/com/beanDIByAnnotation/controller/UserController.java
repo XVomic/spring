@@ -1,11 +1,10 @@
-package com.beanDIByAnnotation.entity.controller;
+package com.beanDIByAnnotation.controller;
 
-import com.beanDIByAnnotation.entity.User;
-import com.beanDIByAnnotation.entity.service.UserService;
+import com.beanDIByAnnotation.service.UserService;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import jakarta.annotation.Resource;
 //import javax.annotation.Resource;
 
 @Controller()

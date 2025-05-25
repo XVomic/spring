@@ -1,10 +1,8 @@
-package com.beanDIByAnnotation.entity.dao.Impl;
+package com.beanDIByAnnotation.dao.Impl;
 
 import com.beanDIByAnnotation.entity.User;
-import com.beanDIByAnnotation.entity.dao.UserDao;
+import com.beanDIByAnnotation.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Repository;
 
 @Repository("UserDao")

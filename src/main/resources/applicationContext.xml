@@ -3,12 +3,19 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--spring配置文件-->
+
+<!--    注册bean与依赖注入（初始化对象）是一起完成的-->
+
+
+<!--    基础版：使用setter为bean初始化注入实例-->
+
 <!--    指定类的配置给spring，才能让spring创建指定类对象的实例-->
     <bean id="helloSpring" class="com.xxc.hellofirst.HelloSpring">
 <!--为userName属性赋值，相当于初始化赋值-->
         <property name="userName" value="张三"></property>
     </bean>
 
+<!--    基础版：使用构造函数为bean初始化注入实例-->
 <!--    配置(注册)User1类的Bean-->
     <bean id="user1" class="com.xxc.denpendencyInject.User1">
 <!--构造方法注入-->
@@ -17,6 +24,7 @@
         <constructor-arg index="2" value="123456"/>
     </bean>
 
+    <!--    基础版：使用setter为bean初始化注入实例-->
     <!--    配置(注册)User1类的Bean-->
     <bean id="user2" class="com.xxc.denpendencyInject.User2">
         <!--setter方法注入-->
@@ -25,9 +33,9 @@
         <property name="password" value="123"></property>
     </bean>
 
-<!--    类对象实例化-->
+<!--    无参构造方法&&&类对象实例化-->
     <bean id="userDao" class="com.xxc.dao.Impl.UserDaoImpl"></bean>
-<!--    依赖注入-->
+<!--    依赖注入对象实例-->
     <bean id="userService" class="com.xxc.service.Impl.UserServiceImpl">
         <property name="userDao" ref="userDao"></property>
     </bean>

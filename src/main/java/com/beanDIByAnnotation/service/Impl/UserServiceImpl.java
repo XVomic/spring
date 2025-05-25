@@ -1,12 +1,11 @@
-package com.beanDIByAnnotation.entity.service.Impl;
+package com.beanDIByAnnotation.service.Impl;
 
-import com.beanDIByAnnotation.entity.User;
-import com.beanDIByAnnotation.entity.dao.UserDao;
-import com.beanDIByAnnotation.entity.service.UserService;
+import com.beanDIByAnnotation.dao.UserDao;
+import com.beanDIByAnnotation.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 //下面这两包不要同时使用
-import jakarta.annotation.Resource;
+
 //import javax.annotation.*;
 
 @Service("UserService")

@@ -9,6 +9,7 @@
     <bean id="bean1" class="com.beanlearn.noargs.Bean1"></bean>
 
 <!--    使用静态工厂模式创建bean,此时的仍然时直接注册bean2-->
+<!--    调用静态工厂方法，并不会实例化静态工厂类-->
     <bean id="bean2" class="com.beanlearn.staticfactory.MyBean2Factory" factory-method="createBean"></bean>
 
 
