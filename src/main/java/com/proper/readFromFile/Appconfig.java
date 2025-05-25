@@ -1,7 +1,6 @@
-package com.proper;
+package com.proper.readFromFile;
 
 import com.beanAnnotation.fundation.model.User;
-import com.myBean.factoryBean.AdminFactoryBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
@@ -23,7 +22,7 @@ public class Appconfig {
 //        System.out.println(new Appconfig().createName);
     ApplicationContext context = new AnnotationConfigApplicationContext(Appconfig.class);
         Object nameFromPropertySource = context.getBean("nameFromPropertySource");
-        System.out.println(nameFromPropertySource);
+        System.out.println(nameFromPropertySource.toString());
 
         User bean = context.getBean(User.class);
         System.out.println(bean.toString());
